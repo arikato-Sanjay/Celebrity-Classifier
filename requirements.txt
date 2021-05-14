@@ -1,5 +1,5 @@
 streamlit==0.81.1
 PyWavelets==1.1.1
-opencv-python==4.5.2.52
+opencv-python==3.3.0.9
 numpy==1.19.4
 joblib==0.16.0
