@@ -42,8 +42,8 @@ def get_img_from_b64(b64str):
 
 
 def get_cropped_img(img_path, b64str):
-    eye_cascade = cv2.CascadeClassifier('./opencv/haarcascades/haarcascade_eye.xml')
-    face_cascade = cv2.CascadeClassifier('./opencv/haarcascades/haarcascade_frontalface_default.xml')
+    eye_cascade = cv2.CascadeClassifier('server/opencv/haarcascades/haarcascade_eye.xml')
+    face_cascade = cv2.CascadeClassifier('server/opencv/haarcascades/haarcascade_frontalface_default.xml')
 
     if img_path:
         img = cv2.imread(img_path)
@@ -112,11 +112,11 @@ def gui():
     st.title('Sports Celebrity Classifier')
 
     img1, img2, img3, img4, img5 = st.beta_columns([1, 1, 1, 1, 1])
-    get_images(img1, './virat.jpg', 'Virat Kohli')
-    get_images(img2, './marry.jpg', 'Mary Kom')
-    get_images(img3, './messi.jpg', 'Lionel Messi')
-    get_images(img4, './saina.jpg', 'Saina Nehwal')
-    get_images(img5, './sunil.jpg', 'Sunil Chhetri')
+    get_images(img1, 'server/virat.jpg', 'Virat Kohli')
+    get_images(img2, 'server/marry.jpg', 'Mary Kom')
+    get_images(img3, 'server/messi.jpg', 'Lionel Messi')
+    get_images(img4, 'server/saina.jpg', 'Saina Nehwal')
+    get_images(img5, 'server/sunil.jpg', 'Sunil Chhetri')
 
     file = st.file_uploader('Upload your image here (Choose from the above mentioned player)')
     temp_file = NamedTemporaryFile(delete=False)
