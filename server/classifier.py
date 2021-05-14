@@ -69,12 +69,12 @@ def load_artifacts():
     global __class_number_to_name
     global __model
 
-    with open('celebrity_dict.json', 'r') as f:
+    with open('./celebrity_dict.json', 'r') as f:
         __class_name_to_number = json.load(f)
         __class_number_to_name = {v: k for k, v in __class_name_to_number.items()}
 
     if __model is None:
-        with open('celebrity_model.pkl', 'rb') as f:
+        with open('./celebrity_model.pkl', 'rb') as f:
             __model = joblib.load(f)
 
 
